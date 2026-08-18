@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Tourism Cloud Platform (ETCP)</title>
+    <!-- Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Premium Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Dynamic Animated Background -->
+    <div class="background-wrapper">
+        <div class="glass-overlay"></div>
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <!-- Global Navigation -->
+    <nav id="main-nav" class="navbar">
+        <div class="nav-container">
+            <div class="logo nav-link" data-target="home">
+                <i class="ph-fill ph-tree-evergreen"></i>
+                <span>ETCP</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><button class="nav-link active" data-target="home">Home</button></li>
+                <li><button class="nav-link" data-target="explore">Explore</button></li>
+                <li><button class="nav-link" data-target="booking">Bookings</button></li>
+                <li><button class="nav-link" data-target="dashboard">Dashboard</button></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="auth-btn" class="btn btn-outline nav-link" data-target="login">Login</button>
+            </div>
+
+            <button class="mobile-menu-toggle">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main App Container -> Single Page Application View Port -->
+    <main id="app-container">
+
+        <!-- 1. Login Page View -->
+        <section id="login" class="view active">
+            <div class="login-wrapper">
+                <div class="glass-panel login-panel">
+                    <div class="login-header">
+                        <div class="icon-container">
+                            <i class="ph-fill ph-plant"></i>
+                        </div>
+                        <h2>Welcome Back</h2>
+                        <p>Continue your sustainable journey.</p>
+                    </div>
+                    <form id="login-form">
+                        <div class="input-group">
+                            <label for="username">Username or Email</label>
+                            <div class="input-wrapper">
+                                <i class="ph ph-user"></i>
+                                <input type="text" id="username" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <div class="input-wrapper">
+                                <i class="ph ph-lock-key"></i>
+                                <input type="password" id="password" placeholder="Enter your password" required>
+                            </div>
+                        </div>
+                        <div class="login-options">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="accent-link">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Sign In</button>
+                    </form>
+                    <div class="login-footer">
+                        <p>Don't have an account? <a href="#" class="accent-link">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Home Page View -->
+        <section id="home" class="view hidden">
+            <!-- Hero Search Section -->
+            <div class="hero-section glass-panel">
+                <div class="hero-content">
+                    <h1>Explore the World,<br><i>Sustainably.</i></h1>
+                    <p>Find the best eco-friendly travel destinations and activities to minimize your footprint and
+                        maximize your experience.</p>
+                    <div class="search-bar glass-panel">
+                        <div class="search-input">
+                            <i class="ph ph-magnifying-glass"></i>
+                            <input type="text" placeholder="Where do you want to go?">
+                        </div>
+                        <button class="btn btn-primary btn-search">Search</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Destinations Section -->
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Featured Destinations</h2>
+                    <a href="#" class="accent-link">See all <i class="ph ph-arrow-right"></i></a>
+                </div>
+
+                <div class="destination-grid">
+                    <!-- Card 1 -->
+                    <div class="card dest-card glass-panel">
+                        <div class="card-img placeholder-img img-1">
+                            <i class="ph ph-mountains"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tag">Forest</div>
+                            <h3>Costa Rica Cloud Forest</h3>
+                            <p class="location"><i class="ph-fill ph-map-pin"></i> Monteverde, Costa Rica</p>
+                            <div class="sustainability-rating">
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph ph-leaf"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card dest-card glass-panel">
+                        <div class="card-img placeholder-img img-2">
+                            <i class="ph ph-waves"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tag">Marine</div>
+                            <h3>Great Barrier Reef Eco-Tour</h3>
+                            <p class="location"><i class="ph-fill ph-map-pin"></i> Queensland, Australia</p>
+                            <div class="sustainability-rating">
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card dest-card glass-panel">
+                        <div class="card-img placeholder-img img-3">
+                            <i class="ph ph-tree"></i>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-tag">Wildlife</div>
+                            <h3>Amazon Rainforest Reserve</h3>
+                            <p class="location"><i class="ph-fill ph-map-pin"></i> Manaus, Brazil</p>
+                            <div class="sustainability-rating">
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph-fill ph-leaf"></i>
+                                <i class="ph ph-leaf"></i>
+                                <i class="ph ph-leaf"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Explore Page View -->
+        <section id="explore" class="view hidden">
+            <div class="explore-layout">
+                <!-- Sidebar Filters -->
+                <aside class="explore-sidebar glass-panel">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <i class="ph ph-faders"></i>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Location</label>
+                        <select class="filter-select">
+                            <option value="">All Locations</option>
+                            <option value="costa-rica">Costa Rica</option>
+                            <option value="australia">Australia</option>
+                            <option value="brazil">Brazil</option>
+                            <option value="iceland">Iceland</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Activity Type</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox"> <span class="checkmark"></span> Hiking & Trekking
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox"> <span class="checkmark"></span> Wildlife Safari
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox"> <span class="checkmark"></span> Scuba Diving
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox"> <span class="checkmark"></span> Eco-Lodging
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <label>Sustainability Rating</label>
+                        <div class="rating-filter">
+                            <label class="radio-container">
+                                <input type="radio" name="rating"> <span class="radiomark"></span> 5 Leaves
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="rating"> <span class="radiomark"></span> 4+ Leaves
+                            </label>
+                            <label class="radio-container">
+                                <input type="radio" name="rating"> <span class="radiomark"></span> 3+ Leaves
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline w-full" style="margin-top: 16px;">Apply Filters</button>
+                </aside>
+
+                <!-- Explore Grid -->
+                <div class="explore-main">
+                    <div class="section-header">
+                        <h2>Explore Activities</h2>
+                        <span class="text-muted">Showing 24 results</span>
+                    </div>
+
+                    <div class="destination-grid">
+                        <!-- Card 1 -->
+                        <div class="card dest-card glass-panel nav-link" data-target="booking" style="cursor: pointer;">
+                            <div class="card-img placeholder-img img-1">
+                                <i class="ph ph-person-simple-walk"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-tag">Hiking</div>
+                                <h3>Volcano Trekking</h3>
+                                <p class="location"><i class="ph-fill ph-map-pin"></i> Arenal, Costa Rica</p>
+                                <div class="sustainability-rating">
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="card dest-card glass-panel nav-link" data-target="booking" style="cursor: pointer;">
+                            <div class="card-img placeholder-img img-2">
+                                <i class="ph ph-fish"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-tag">Marine</div>
+                                <h3>Coral Reef Restoration</h3>
+                                <p class="location"><i class="ph-fill ph-map-pin"></i> Maldives</p>
+                                <div class="sustainability-rating">
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="card dest-card glass-panel nav-link" data-target="booking" style="cursor: pointer;">
+                            <div class="card-img placeholder-img img-3">
+                                <i class="ph ph-bird"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-tag">Wildlife</div>
+                                <h3>Bird Watching Tour</h3>
+                                <p class="location"><i class="ph-fill ph-map-pin"></i> Galapagos, Ecuador</p>
+                                <div class="sustainability-rating">
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph ph-leaf"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="card dest-card glass-panel nav-link" data-target="booking" style="cursor: pointer;">
+                            <div class="card-img placeholder-img img-1">
+                                <i class="ph ph-tent"></i>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-tag">Lodging</div>
+                                <h3>Solar Powered Eco-Lodge</h3>
+                                <p class="location"><i class="ph-fill ph-map-pin"></i> Swiss Alps</p>
+                                <div class="sustainability-rating">
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                    <i class="ph-fill ph-leaf"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Booking Page View -->
+        <section id="booking" class="view hidden">
+            <!-- Hero Image Placeholder -->
+            <div class="booking-hero placeholder-img img-1">
+                <i class="ph ph-mountains" style="font-size: 5rem;"></i>
+            </div>
+
+            <div class="booking-container flex-layout">
+                <!-- Activity Details -->
+                <div class="booking-details">
+                    <div class="details-header">
+                        <div class="tags">
+                            <span class="tag">Forest</span>
+                            <span class="tag tag-outline">Guided Tour</span>
+                        </div>
+                        <h2 class="page-title">Costa Rica Cloud Forest Expedition</h2>
+                        <p class="location"><i class="ph-fill ph-map-pin"></i> Monteverde, Costa Rica</p>
+                    </div>
+
+                    <div class="details-section">
+                        <h3>About this Activity</h3>
+                        <p>Immerse yourself in the breathtaking biodiversity of the Monteverde Cloud Forest. This guided
+                            eco-tour takes you through suspended bridges and winding trails, where you'll encounter
+                            exotic wildlife and vibrant flora. Designed to leave zero trace, this experience connects
+                            you with nature while actively supporting local conservation efforts.</p>
+                    </div>
+
+                    <div class="details-section">
+                        <h3>Sustainability Impact</h3>
+                        <div class="impact-grid">
+                            <div class="impact-card glass-panel">
+                                <div class="icon-wrap"><i class="ph-fill ph-leaf"></i></div>
+                                <h4>Carbon Neutral</h4>
+                                <p>100% of emissions offset through local reforestation.</p>
+                            </div>
+                            <div class="impact-card glass-panel">
+                                <div class="icon-wrap"><i class="ph-fill ph-users"></i></div>
+                                <h4>Community Focus</h4>
+                                <p>Employs 100% local guides and supports native businesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Sticky Panel -->
+                <div class="booking-sidebar">
+                    <div class="booking-panel glass-panel">
+                        <div class="price-header">
+                            <h3>$145</h3>
+                            <span class="unit">/ person</span>
+                        </div>
+                        <div class="sustainability-rating rating-mb">
+                            <i class="ph-fill ph-leaf"></i>
+                            <i class="ph-fill ph-leaf"></i>
+                            <i class="ph-fill ph-leaf"></i>
+                            <i class="ph-fill ph-leaf"></i>
+                            <i class="ph ph-leaf" style="color: var(--text-muted)"></i>
+                            <span class="rating-text">(4.8 Eco Score)</span>
+                        </div>
+
+                        <form class="booking-form"
+                            onsubmit="event.preventDefault(); document.querySelector('.nav-link[data-target=\'dashboard\']').click();">
+                            <div class="input-group">
+                                <label>Date</label>
+                                <div class="input-wrapper">
+                                    <i class="ph ph-calendar"></i>
+                                    <input type="date" required>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label>Guests</label>
+                                <div class="input-wrapper">
+                                    <i class="ph ph-users"></i>
+                                    <input type="number" min="1" max="10" placeholder="Number of guests" value="1"
+                                        required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full btn-large">Book Now</button>
+                            <p class="no-charge-msg">You won't be charged yet</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. User Dashboard View -->
+        <section id="dashboard" class="view hidden">
+            <div class="dashboard-layout">
+                <!-- Dashboard Sidebar -->
+                <aside class="dashboard-sidebar glass-panel">
+                    <div class="user-profile">
+                        <div class="avatar placeholder-img img-2">
+                            <i class="ph ph-user"></i>
+                        </div>
+                        <h3>Jane Doe</h3>
+                        <p class="text-muted">Eco-Traveler</p>
+                    </div>
+
+                    <ul class="dashboard-nav">
+                        <li><a href="#" class="active"><i class="ph ph-calendar-check"></i> My Bookings</a></li>
+                        <li><a href="#"><i class="ph ph-heart"></i> Saved Destinations</a></li>
+                        <li><a href="#"><i class="ph ph-user-circle"></i> Profile Settings</a></li>
+                        <li><a href="#"><i class="ph ph-leaf"></i> Sustainability Impact</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Dashboard Main Content -->
+                <div class="dashboard-main">
+                    <div class="dashboard-header mb-4">
+                        <h2>My Bookings</h2>
+                        <div class="dashboard-stats flex-layout">
+                            <div class="stat-card glass-panel">
+                                <span class="stat-value text-primary">3</span>
+                                <span class="stat-label">Upcoming Trips</span>
+                            </div>
+                            <div class="stat-card glass-panel">
+                                <span class="stat-value text-primary">12</span>
+                                <span class="stat-label">Past Trips</span>
+                            </div>
+                            <div class="stat-card glass-panel" style="background: var(--primary-light); color: white;">
+                                <span class="stat-value" style="color: white; font-size: 1.5rem;"><i
+                                        class="ph-fill ph-leaf"></i> 450</span>
+                                <span class="stat-label" style="color: rgba(255,255,255,0.9);">kg CO2 Offset</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-content">
+                        <!-- Upcoming Trips Section -->
+                        <div class="booking-section">
+                            <h3>Upcoming Trips</h3>
+                            <div class="booking-list">
+                                <!-- Booking Card -->
+                                <div class="booking-card glass-panel">
+                                    <div class="booking-img placeholder-img img-1">
+                                        <i class="ph ph-mountains"></i>
+                                    </div>
+                                    <div class="booking-info">
+                                        <div class="booking-head flex-space-between">
+                                            <h4>Costa Rica Cloud Forest Expedition</h4>
+                                            <span class="status-badge upcoming">Upcoming</span>
+                                        </div>
+                                        <p class="location"><i class="ph-fill ph-map-pin"></i> Monteverde, Costa Rica
+                                        </p>
+                                        <div class="booking-details-row text-muted">
+                                            <span><i class="ph ph-calendar"></i> Oct 15 - Oct 20, 2026</span>
+                                            <span><i class="ph ph-users"></i> 2 Guests</span>
+                                            <span><i class="ph ph-leaf"></i> Carbon Neutral</span>
+                                        </div>
+                                        <div class="booking-actions" style="margin-top: 16px;">
+                                            <button class="btn btn-outline"
+                                                style="padding: 8px 16px; font-size: 0.9rem;">View Itinerary</button>
+                                            <button class="btn btn-primary"
+                                                style="padding: 8px 16px; font-size: 0.9rem;">Manage Booking</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Past Trips Section -->
+                        <div class="booking-section mt-5">
+                            <h3>Past Trips</h3>
+                            <div class="booking-list">
+                                <!-- Past Booking Card -->
+                                <div class="booking-card glass-panel past-booking">
+                                    <div class="booking-img placeholder-img img-3">
+                                        <i class="ph ph-tree"></i>
+                                    </div>
+                                    <div class="booking-info">
+                                        <div class="booking-head flex-space-between">
+                                            <h4>Amazon Rainforest Reserve</h4>
+                                            <span class="status-badge completed">Completed</span>
+                                        </div>
+                                        <p class="location"><i class="ph-fill ph-map-pin"></i> Manaus, Brazil</p>
+                                        <div class="booking-details-row text-muted">
+                                            <span><i class="ph ph-calendar"></i> Feb 10 - Feb 15, 2026</span>
+                                            <span><i class="ph ph-users"></i> 1 Guest</span>
+                                        </div>
+                                        <div class="booking-actions" style="margin-top: 16px;">
+                                            <button class="btn btn-outline"
+                                                style="padding: 8px 16px; font-size: 0.9rem;">Leave a Review</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
